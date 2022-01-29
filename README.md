@@ -3,6 +3,7 @@
 ## Problem setup
 Consider a discrete grid of size n × n. Here is an example for n = 5.
 
+```
    j -> 
       1  2  3  4  5  
 i    +--+--+--+--+--+
@@ -16,6 +17,7 @@ v    +--+--+--+--+--+
      +--+--+--+--+--+
    5 |  |  |  |  |  |
      +--+--+--+--+--+
+```
      
 We define the following operations:
 
@@ -27,6 +29,7 @@ delete_v (i, j):
     remove border to the right of row i and column j
 In the example above, delete_v(2, 3) yields the following result:
 
+```
    j -> 
       1  2  3  4  5  
 i    +--+--+--+--+--+
@@ -40,12 +43,14 @@ v    +--+--+--+--+--+
      +--+--+--+--+--+
    5 |  |  |  |  |  |
      +--+--+--+--+--+
+```
 
 (2) Horizontal
 delete_h (i, j):
     remove border below row i and column j
 Continuing from above, applying, delete_h(4, 3) gives:
 
+```
    j -> 
       1  2  3  4  5  
 i    +--+--+--+--+--+
@@ -59,6 +64,7 @@ v    +--+--+--+--+--+
      +--+--+  +--+--+
    5 |  |  |  |  |  |
      +--+--+--+--+--+
+```
 
 Operation (3)
 We may also remove and intersection:
@@ -68,6 +74,7 @@ delete_isec (i, j):
 
 Applying delete_isec (2, 3) gives:
 
+```
    j -> 
       1  2  3  4  5  
 i    +--+--+--+--+--+
@@ -81,6 +88,7 @@ v    +--+--+--+--+--+
      +--+--+  +--+--+
    5 |  |  |  |  |  |
      +--+--+--+--+--+
+```
 
 Exercise:
 Given n, implement a data structure / representation with which we can:
